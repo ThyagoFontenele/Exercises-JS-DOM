@@ -27,6 +27,10 @@ body{
     box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.144);
     
 }
+.button{
+    font-size: 1rem;
+    margin: 8px 0px;
+}
 h2{
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -35,8 +39,10 @@ h2{
 }
 .img{
     width: 200px;
-    height: 200px;
-    
+    height: 250px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 footer{
     margin-top: 20px;
