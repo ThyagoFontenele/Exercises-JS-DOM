@@ -1,0 +1,57 @@
+body{
+    
+    background-color: rgb(92, 88, 88);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.manha{
+    background-color: rgb(214, 185, 105);
+}
+.tarde{
+    background-color: rgb(189, 129, 94);
+}
+.noite{
+    background-color: rgb(88, 88, 88);
+}
+.title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+.title{
+    font-weight: 700;
+}
+.container{
+    background-color: white;
+    color: black;
+    width: 80vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.144);
+    
+}
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.imagem{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 20px;
+    font-style: oblique;
+}
