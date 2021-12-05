@@ -13,40 +13,43 @@ const classificaPessoa = (idade) =>{
         return 'idoso(a)';
     }
 }
-botao.addEventListener('click', function(){
-    let anoAtual = new Date().getFullYear();
-    const img = document.querySelector('.img');
-    const anoNascimento = document.querySelector('.ano');
+
+const verificaSexo = () => {
     const radioM = document.querySelector('#m');
     const radioF = document.querySelector('#f');
-    const resultado = document.querySelector('.resultado');
-
-    let idade;
-
-    if(anoNascimento.value > 1900 && anoNascimento.value < anoAtual){
-        idade = anoAtual - anoNascimento.value;
-    }else{
-        alert('[ERRO] Ano de Nascimento inválido ou vázio!')
-    }
-    
-    let sexo;
-
     if(radioM.checked === true) {
-        sexo = 'Homem';
+        return'Homem';
         
     }else if(radioF.checked === true) {
-        sexo = 'Mulher';
+        return 'Mulher';
     }else{
         alert('[Erro] Marque o sexo!');
     }
+}
+
+const verificaIdade = () => {
+    let anoAtual = new Date().getFullYear();
+    const anoNascimento = document.querySelector('.ano');
+    if(anoNascimento.value > 1900 && anoNascimento.value < anoAtual){
+        return anoAtual - anoNascimento.value;
+    }else{
+        alert('[ERRO] Ano de Nascimento inválido ou vázio!')
+    }
+}
+
+botao.addEventListener('click', function(){
+    
+    const img = document.querySelector('.img');
+    const resultado = document.querySelector('.resultado');
+    
+    let idade = verificaIdade();
+    let sexo = verificaSexo();
 
     if(sexo != undefined && idade < 110 && idade > 0){
-
 
         const estado = classificaPessoa(idade);
         resultado.textContent = `${sexo} com ${idade} anos, ${estado}`;
         
-
         if(sexo === 'Homem'){
             img.src = "./assets/masculino.jpg"
         }else{
