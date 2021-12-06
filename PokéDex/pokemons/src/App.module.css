@@ -1,0 +1,48 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 50px 100px;
+}
+.title{
+    color: #fcc632;
+    text-shadow: -2px 0 #2213fa, 0 2px #2213fa, 2px 0 #2213fa, 0 -2px #2213fa;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+}
+.input{
+    height: 38px;
+    width: 300px;
+    border: 3px solid #2213fa;
+    font-size: 1.2rem;
+    padding: 0px 0px 0px 10px;
+    border-radius: 4px;
+}
+.img{
+    height: 30px;
+    padding: 2px;
+    cursor: pointer;
+   
+}
+.pesquisa{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisar{
+    margin-left: 4px;
+    border: 3px solid #2213fa;
+    background-color: #fcc632;
+    border-radius: 4px;
+}
+.pesquisar:hover{
+    background-color: #e0b231;
+    transition: 300ms;
+}
+.pesquisar:active{
+    background-color: #b48f2a;
+    transform: translateY(5px); 
+}

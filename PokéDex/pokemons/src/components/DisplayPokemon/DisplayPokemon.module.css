@@ -13,7 +13,8 @@
 }
 .items:hover{
     background-color: #e0b231;
-    transition: 300ms;
+    transition: 200ms all ease-in-out;
+    transform: translateY(4px); 
 }
 .items:last-child{
     margin-bottom: 10px;
