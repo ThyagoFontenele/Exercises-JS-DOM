@@ -15,7 +15,6 @@ export default function DisplayPokemon({name, url}){
         api.get('')
         .then((res) => {
             setImage(res.data.sprites.front_default);
-            console.log(res)
         })  
         .catch((err) => {
             console.log(err);
@@ -23,16 +22,13 @@ export default function DisplayPokemon({name, url}){
     }
     
     useEffect( () => {
-
         getImagens();
-
-
-    }, [])
+    })
     return(
         <>
             <div className={classes.items}>
 
-                <img src={image} className={classes.img} />
+                <img src={image} className={classes.img} alt={name}/>
                 <p className={classes.name}>{name}</p>
                 
             </div>
