@@ -3,7 +3,10 @@
    License: none (public domain)
 */
 body{
-	background-color: #ffc815;
+	background-color: #f3f3f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

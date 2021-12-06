@@ -15,6 +15,7 @@ export default function DisplayPokemon({name, url}){
         api.get('')
         .then((res) => {
             setImage(res.data.sprites.front_default);
+            console.log(res)
         })  
         .catch((err) => {
             console.log(err);
@@ -22,7 +23,10 @@ export default function DisplayPokemon({name, url}){
     }
     
     useEffect( () => {
+
         getImagens();
+
+
     }, [])
     return(
         <>

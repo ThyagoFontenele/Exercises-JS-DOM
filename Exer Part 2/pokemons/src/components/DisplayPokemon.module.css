@@ -1,18 +1,30 @@
 .items{
-    background-color: #a73737;
+    background-color: #fcc632;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
     width: 200px;
-    height: 200px;
-    border-radius: 10px;
+    height: 230px;
+    border: 5px solid #2213fa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.items:hover{
+    background-color: #e0b231;
+    transition: 300ms;
+}
+.items:last-child{
+    margin-bottom: 10px;
 }
 .img{
-    width: 100px;
-    height: 100px;
+    height: 120px;
 }
 .name{
-    color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: 30px;
+    text-transform: capitalize;
 }
