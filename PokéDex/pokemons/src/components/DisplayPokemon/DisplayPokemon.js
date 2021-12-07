@@ -23,7 +23,8 @@ export default function DisplayPokemon({name, url}){
     
     useEffect( () => {
         getImagens();
-    }, [])
+    })
+
     return(
         <>
             <div className={classes.items}>

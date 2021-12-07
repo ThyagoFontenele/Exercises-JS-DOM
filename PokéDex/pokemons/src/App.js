@@ -9,7 +9,7 @@ function App() {
   const [busca, setBusca ] = useState('');
  
   const getPokemons = () => {
-    api.get(`pokemon?limit=10&offset=0`)
+    api.get(`pokemon?limit=898&offset=0`)
     .then((res) => {
       setPokemons(res.data.results);
     
@@ -28,14 +28,26 @@ function App() {
     <>
       <h1 className={classes.title}>Pokédex</h1>
       <div className={classes.pesquisa}>
-      <input type="text" className={classes.input} value={busca} onChange={ e => setBusca(e.target.value) } />
+
+       <input type="text" className={classes.input} value={busca} onChange={ e => setBusca(e.target.value) }  placeholder='Pesquise o Pokémon'/>
+
         <button className={classes.pesquisar}><img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Lupa-Azul-PNG.png" className={classes.img} alt='lupa'/>
         </button>
       </div>
      
       <div className={classes.grid}>
-        {pokemons.map( (ele) => (
+
+        {pokemons.filter((ele) =>{
+          if(busca === ''){
+            return ele;
+          }else if(ele.name.toLowerCase().includes(busca.toLowerCase())) {
+      
+            return ele;
+          }
+        }).map( (ele) => (
+
           <DisplayPokemon  name={ele.name} url={ele.url} />
+
         ))}
       </div>
       
