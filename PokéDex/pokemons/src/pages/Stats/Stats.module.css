@@ -1,0 +1,15 @@
+.container{
+    background-color: #e0b231;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}

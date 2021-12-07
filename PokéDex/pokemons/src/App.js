@@ -2,14 +2,15 @@ import React, {useState, useEffect} from "react";
 import classes from "./App.module.css";
 import api from './service/Api';
 import DisplayPokemon from './components/DisplayPokemon/DisplayPokemon';
-
+import Stats from './pages/Stats/Stats'
 function App() {
 
   const [pokemons, setPokemons] = useState([]);
   const [busca, setBusca ] = useState('');
- 
+  
+
   const getPokemons = () => {
-    api.get(`pokemon?limit=898&offset=0`)
+    api.get(`pokemon?limit=100&offset=0`)
     .then((res) => {
       setPokemons(res.data.results);
     
@@ -21,12 +22,11 @@ function App() {
   useEffect(() => {
     getPokemons();
   }, [])
-
-  
   
   return (
     <>
-      <h1 className={classes.title}>Pokédex</h1>
+      <h1 className={classes.title} >Pokédex</h1>
+  
       <div className={classes.pesquisa}>
 
        <input type="text" className={classes.input} value={busca} onChange={ e => setBusca(e.target.value) }  placeholder='Pesquise o Pokémon'/>
