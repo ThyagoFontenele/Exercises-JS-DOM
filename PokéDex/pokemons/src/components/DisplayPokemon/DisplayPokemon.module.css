@@ -1,34 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&family=Work+Sans&display=swap');
 
 .items{
-    background-color: #fcc632;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4px;
     width: 250px;
-    height: 230px;
-    border: 5px solid #2213fa;
-    border-radius: 10%;
-    cursor: pointer;
+    height: 250px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    
 }
-.items:hover{
-    background-color: #e0b231;
-    transition: 200ms all ease-in-out;
-    transform: translateY(2px); 
+.items:hover .card_front{
+    transform: rotateX(-180deg);
+}
+.items:hover .card_back{ 
+    transform: rotateX(0deg);
+}
+.card_back h2{
+    margin-top: 10px;
+}
+.card_front{
+    position: absolute;
+    border-radius: 5px;
+    width: 250px; height: 250px;
+    top: 0; left: 0;
+    border: 1px solid rgb(82, 66, 223);
+    background-color: rgb(82, 66, 223);
+    transform: rotateX(0deg);
+    transition: .6s;
+}
+.card_back{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: start;
+    width: 250px; height: 250px;
+    border: 2px solid rgb(82, 66, 223);
+    top: 0; left: 0;
+    background-color: #fcc632;
+    transform: rotateX(180deg);
+    transition: .6s; 
+}
+.habilidades{
+    text-transform: capitalize;
 }
 .items:last-child{
     margin-bottom: 10px;
 }
 .img{
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
 }
 .name{
     color: rgb(38, 0, 255);
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: capitalize;
+    text-align: center;
     font-family: 'Work Sans', sans-serif;
 }

@@ -32,7 +32,6 @@ function App() {
       <div className={classes.pesquisa}>
 
        <input type="text" className={classes.input} value={busca} onChange={ e => setBusca(e.target.value) }  placeholder='Nome do Pokémon'/>
-
         <button className={classes.pesquisar} onClick={ () => { setPesquisa(busca); } } ><img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Lupa-Azul-PNG.png" className={classes.img} alt='lupa'/>
         </button>
       </div>
