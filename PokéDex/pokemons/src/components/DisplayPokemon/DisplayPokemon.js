@@ -55,13 +55,17 @@ export default function DisplayPokemon({name, url}){
                 <div className={classes.card_front}><img src={image} className={classes.img} alt={name}/></div>
 
                 <div className={classes.card_back}>
-                    <h2 className={classes.name}>{name}</h2>
-                    <p>Altura: {height}</p>
-                    <p>Peso: {weight}</p>
-                    <p> </p>
+                    
+                    <h2 className={classes.name} >{name}</h2>
+                    <p className={classes.altura} >Height: {height}</p>
+                    <p className={classes.peso} >Weight: {weight}</p>
                     <p className={classes.habilidades}>  
-                        Habilidades: {abilities.map(ele => ele.ability.name + ', ')}
+                        Abilities: {abilities.map(ele => ele.ability.name + '; ')}
                     </p>
+                    <p className={classes.tipos}>
+                        Type: {types.map(ele => ele.type.name + '; ')}
+                    </p>
+
                 </div>   
 
             </div>
